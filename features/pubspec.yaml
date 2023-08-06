@@ -1,0 +1,24 @@
+name: features
+description: A new Flutter project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dependencies:
+    path: ../dependencies
+  core:
+    path: ../core
+  art_core:
+    path: ../art_core
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
