@@ -13,11 +13,12 @@ import '../../domain/mapper/movies_mapper.dart';
 class MoviesRepositoryImpl implements MoviesRepository{
 
   final RemoteMoviesDataSource _dataSource;
-  MoviesRepositoryImpl(this._dataSource);
+  final MoviesMapper _mapper ;
+  final MovieDetailsMapper _movieDetailsMapper ;
+  MoviesRepositoryImpl(this._dataSource, this._mapper, this._movieDetailsMapper);
 
 
-  final _mapper = Modular.get<MoviesMapper>();
-  final _movieDetailsMapper = Modular.get<MovieDetailsMapper>();
+
 
   @override
   Future<Either<Failure, List<MovieEntity>>> fetchLatestMovies() async{

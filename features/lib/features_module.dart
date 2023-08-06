@@ -37,7 +37,7 @@ class FeaturesModule extends Module {
     Bind.lazySingleton((i) => MoviesMapper()),
     Bind.lazySingleton((i) => MovieDetailsMapper()),
 
-    Bind.lazySingleton((i) => MoviesRepositoryImpl(i() )),
+    Bind.lazySingleton((i) => MoviesRepositoryImpl(i() ,i() , i() )),
 
     Bind.lazySingleton((i) => FetchLatestMoviesUseCase(i())),
     Bind.lazySingleton((i) => FetchPopularMoviesUseCase(i())),
@@ -48,8 +48,9 @@ class FeaturesModule extends Module {
     Bind.lazySingleton((i) => LatestMoviesBloc(i())),
     Bind.lazySingleton((i) => PopularMoviesBloc(i())),
     Bind.lazySingleton((i) => TopRatedMoviesBloc(i())),
-    Bind.lazySingleton((i) => UpcomingMoviesBloc(i())),
-    Bind.lazySingleton((i) => MovieDetailsBloc(i())),
+
+    Bind.factory((i) => UpcomingMoviesBloc(i())),
+    Bind.factory((i) => MovieDetailsBloc(i())),
   ];
 
   @override
