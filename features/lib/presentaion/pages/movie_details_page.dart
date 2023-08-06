@@ -148,4 +148,11 @@ class _MovieDetailsPageState extends State<MovieDetailsPage> {
       },
     );
   }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    movieDetailsBloc.close();
+    super.dispose();
+  }
 }

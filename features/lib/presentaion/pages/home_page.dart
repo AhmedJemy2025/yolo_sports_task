@@ -238,4 +238,14 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    latestMoviesBloc.close();
+    popularMoviesBloc.close();
+    upcomingMoviesBloc.close();
+    topRatedMoviesBloc.close();
+    super.dispose();
+  }
 }
