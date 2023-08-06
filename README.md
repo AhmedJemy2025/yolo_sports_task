@@ -1,16 +1,33 @@
-# yolo_sports_task
 
-A new Flutter project.
+# Movie App
+A movie app made in Flutter with clean architecture using BLoC and the movie db API.
 
-## Getting Started
+## Features
+- Home Page feature
+- Movie Details feature
 
-This project is a starting point for a Flutter application.
+## Architecture
+- Clean Architecture
+- BLoC
+- Modularization
+- Dependency Injection
+- Unit Tests
+- Makefile
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+### 1. Clone the repo
+```bash
+cd flutter-movie-app
+```
+### 2. Run pub get
+### it's modular so you don't have to go into each module and get its dependencies I've added a makefile to make it easier
+```bash
+make pub_get_all
+```
+
+### 3. Run the app
+```bash 
+flutter run
+```
